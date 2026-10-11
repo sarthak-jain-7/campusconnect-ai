@@ -1,5 +1,5 @@
 import React from 'react';
-import { Bot, Menu, Sliders, Plus } from 'lucide-react';
+import { Bot, Menu, Sliders, Plus, FileText } from 'lucide-react';
 import type { AIProvider } from '../../types';
 
 interface HeaderProps {
@@ -52,6 +52,16 @@ export const Header: React.FC<HeaderProps> = ({
 
       {/* Right controls */}
       <div className="flex items-center gap-2">
+        <a
+          href="/ASSIGNMENT_11_REPORT.pdf"
+          download="ASSIGNMENT_11_REPORT.pdf"
+          className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-850 text-slate-200 hover:text-white border border-slate-700/80 text-xs font-semibold shadow-sm transition hover:border-rose-500/50"
+          title="Download Official Assignment 11 Report (PDF)"
+        >
+          <FileText className="w-3.5 h-3.5 text-rose-400" />
+          <span className="hidden sm:inline">Report (PDF)</span>
+        </a>
+
         <button
           onClick={onNewChat}
           className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold shadow-sm transition"
